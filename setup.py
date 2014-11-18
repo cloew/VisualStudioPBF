@@ -1,10 +1,10 @@
 from distutils.core import setup
 
-setup(name='vs_pbf',
+setup(name='pbf_vs',
       version='.1',
-      description="Programmer's Best Friend Utility Extension for vs_pbf",
-      author='', # Add your name here
-      author_email='', # Add your e-mail here
-      packages=['vs_pbf', 'vs_pbf.Commands', 'vs_pbf.templates'],
-      #package_data = {'vs_pbf.templates':[]}, # Add template files
+      description="Programmer's Best Friend Utility Extension for Visual Studio",
+      author='Chris Loew',
+      author_email='cloew123@gmail.com',
+      packages=['pbf_vs', 'pbf_vs.Commands', 'pbf_vs.templates'],
+      #package_data = {'pbf_vs.templates':[]}, # Add template files
      )
