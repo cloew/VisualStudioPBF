@@ -55,3 +55,6 @@ target/
 
 # PBF
 .pbf-properties
+
+# Visual Studio Project
+TestProject
