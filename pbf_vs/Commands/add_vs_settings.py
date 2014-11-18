@@ -1,10 +1,8 @@
+from pbf.helpers.configuration_helper import GetRelativePathFromConfigurationsDirectory
 from pbf.helpers.Project.project_helper import GetParentProjectFromDirectory
 from pbf.helpers.Project.project_xml_helper import SaveProjectXML
 
 from pbf.Commands import command_manager
-
-from pbf_toggl.helpers.toggl_helper import FindProjectByName
-import pbf_toggl.helpers.toggl_settings_helper as togglSettings
 
 from xml.etree.ElementTree import SubElement
 
@@ -32,7 +30,7 @@ class AddVSSettings:
         """ Add Visual Studio Settings to the project XML """
         vsElement = SubElement(pbfProject.projectXML, "visual-studio")
         solutionElement = SubElement(vsElement, "solution")
-        solutionElement.text = solution
+        solutionElement.text = GetRelativePathFromConfigurationsDirectory(solution)
             
         SaveProjectXML()
     
