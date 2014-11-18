@@ -5,6 +5,9 @@ setup(name='pbf_vs',
       description="Programmer's Best Friend Utility Extension for Visual Studio",
       author='Chris Loew',
       author_email='cloew123@gmail.com',
-      packages=['pbf_vs', 'pbf_vs.Commands', 'pbf_vs.templates'],
+      packages=['pbf_vs',
+                'pbf_vs.Commands',
+                'pbf_vs.templates',
+                'pbf_vs.helpers'],
       #package_data = {'pbf_vs.templates':[]}, # Add template files
      )
