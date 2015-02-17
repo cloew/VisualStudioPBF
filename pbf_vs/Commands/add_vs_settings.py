@@ -2,15 +2,11 @@ from pbf.helpers.configuration_helper import GetRelativePathFromConfigurationsDi
 from pbf.helpers.Project.project_helper import GetParentProjectFromDirectory
 from pbf.helpers.Project.project_xml_helper import SaveProjectXML
 
-from pbf.Commands import command_manager
 
 from xml.etree.ElementTree import SubElement
 
 class AddVSSettings:
     """ Represents command to add Visual Studio Settings to the current Project """
-    category = "add"
-    command = "vs-settings"
-    description = "Add Visual Studio settings to the current project"
     
     def addArguments(self, parser):
         """ Add arguments to the parser """
@@ -33,5 +29,3 @@ class AddVSSettings:
         solutionElement.text = GetRelativePathFromConfigurationsDirectory(solution)
             
         SaveProjectXML()
-    
-command_manager.RegisterCommand(AddVSSettings)
